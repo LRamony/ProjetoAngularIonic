@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      YuGiOh - CardFight
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let card of cards">
+      <ion-item>
+        <ion-avatar item-start>
+        </ion-avatar>
+        <h2>{{ card.id }} {{ card.name }}</h2>
+      </ion-item>
+    </ion-item-sliding>
+
+  </ion-list>
+
+
+  <ion-item>
+    <ion-label>Cards List:</ion-label>
+    <p>{{cards[0]}}</p>
+  </ion-item>
+
+
+</ion-content>
+
+<ion-item>
+  <ion-label position="stached"></ion-label>
+  <ion-input type="text" [(ngModel)]="searchArchetype"></ion-input>
+  <ion-button expand="block" (click)="searchCard()">Search</ion-button>
+</ion-item>
