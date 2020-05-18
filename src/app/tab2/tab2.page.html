@@ -12,13 +12,31 @@
     </ion-toolbar>
   </ion-header>
 
-
   <ion-list>
     <ion-item-sliding *ngFor="let card of cards">
       <ion-item>
         <ion-avatar item-start>
         </ion-avatar>
-        <h2>{{ card.id }} {{ card.name }}</h2>
+
+        <!--InicioCard-->
+        <ion-card>
+          <!--
+          <ion-card-header>
+            <ion-card-title>{{ card.name }}</ion-card-title>
+            <ion-card-subtitle>Id: {{ card.id }}</ion-card-subtitle>
+          </ion-card-header>
+          -->
+          <ion-card-content>
+           <img src="{{card.card_images[0].image_url}}">
+          </ion-card-content>
+          <!--
+          <ion-card-content>
+            {{card.desc}}
+          </ion-card-content>       
+        -->
+      </ion-card>
+        <!--FimCard-->
+
       </ion-item>
     </ion-item-sliding>
 
