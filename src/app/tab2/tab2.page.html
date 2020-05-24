@@ -9,6 +9,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
+      <ion-title size="large">YuGiOh - CardFight</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -29,6 +30,13 @@
           <ion-card-content>
            <img src="{{card.card_images[0].image_url}}">
           </ion-card-content>
+          <ion-card-content>
+            <ion-card-title>Market Value:</ion-card-title>
+            <ion-card-subtitle>TCGplayer: {{card.card_prices[0].tcgplayer_price}}</ion-card-subtitle>
+            <ion-card-subtitle>ebayPrice: {{card.card_prices[0].ebay_price}}</ion-card-subtitle>
+            <ion-card-subtitle>AmazonPrice: {{card.card_prices[0].amazon_price}}</ion-card-subtitle>
+            <ion-card-subtitle>CardMarket: {{card.card_prices[0].cardmarket_price}}</ion-card-subtitle>
+          </ion-card-content>
           <!--
           <ion-card-content>
             {{card.desc}}
@@ -44,8 +52,8 @@
 
 
   <ion-item>
-    <ion-label>Cards List:</ion-label>
-    <p>{{cards[0]}}</p>
+    <!--<ion-label>Cards List:</ion-label>-->
+    <!--<p>{{cards[0]}}</p>-->
   </ion-item>
 
 
